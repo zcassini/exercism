@@ -128,3 +128,21 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Java specific
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+target/
+build/
+.gradle/
+
+# Elixir specific
+/_build/
+/deps/
+*.ez
+*.beam
+elixir_crash.dump
