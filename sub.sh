@@ -9,7 +9,7 @@ submit_exercise() {
     cd "$CURRENT_DIR/$1" || exit
 
     # Submit the exercise
-    exercism submit
+    nix-shell -p exercism --run "exercism submit"
 
     # Return to the original directory
     cd "$CURRENT_DIR" || exit
