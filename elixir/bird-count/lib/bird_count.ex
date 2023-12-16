@@ -7,7 +7,6 @@ defmodule BirdCount do
 
   def has_day_without_birds?([]), do: false
   def has_day_without_birds?([0 | _]), do: true
-  def has_day_without_birds?([x | []]), do: false
   def has_day_without_birds?([_ | xs]), do: has_day_without_birds?(xs)
 
   def total([]), do: 0
@@ -15,5 +14,5 @@ defmodule BirdCount do
 
   def busy_days([]), do: 0
   def busy_days([x | xs]) when x >= 5, do: 1 + busy_days(xs)
-  def busy_days([x | xs]), do: busy_days(xs)
+  def busy_days([_x | xs]), do: busy_days(xs)
 end
